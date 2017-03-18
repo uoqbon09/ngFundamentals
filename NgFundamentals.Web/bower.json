@@ -1,0 +1,32 @@
+{
+  "name": "NgFundamentals.Web",
+  "authors": [
+    "uoqbon09 <carlson.go@thebusybongo.com>"
+  ],
+  "description": "Angular Fundamentals",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "spa"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.11",
+    "bootstrap": "^3.3.7",
+    "underscore": "^1.8.3",
+    "angular-bootstrap": "^2.5.0",
+    "angular-animate": "1.5.11"
+  },
+  "resolutions": {
+    "angular-animate": "1.5.11"
+  }
+}
