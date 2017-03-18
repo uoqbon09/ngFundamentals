@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-var eventsApp = angular.module('eventsApp', ['ngAnimate', 'ui.bootstrap']);
+var eventsApp = angular.module('eventsApp', ['ngSanitize', 'ngAnimate', 'ui.bootstrap']);

@@ -83,6 +83,9 @@
     <Content Include="app\vendor\angular-bootstrap\ui-bootstrap-tpls.min.js" />
     <Content Include="app\vendor\angular-bootstrap\ui-bootstrap.js" />
     <Content Include="app\vendor\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="app\vendor\angular-sanitize\angular-sanitize.js" />
+    <Content Include="app\vendor\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="app\vendor\angular-sanitize\index.js" />
     <Content Include="packages.config" />
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
@@ -221,6 +224,12 @@
     <Content Include="app\vendor\angular-animate\LICENSE.md" />
     <Content Include="app\vendor\angular-animate\package.json" />
     <Content Include="app\vendor\angular-animate\README.md" />
+    <Content Include="app\vendor\angular-sanitize\.bower.json" />
+    <Content Include="app\vendor\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="app\vendor\angular-sanitize\bower.json" />
+    <Content Include="app\vendor\angular-sanitize\LICENSE.md" />
+    <Content Include="app\vendor\angular-sanitize\package.json" />
+    <Content Include="app\vendor\angular-sanitize\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
