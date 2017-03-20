@@ -11,7 +11,7 @@
     <div class="navbar">
         <div class="container">
             <ul class="nav navbar-nav">
-                
+                <li><a href="NewEvent.html">Create Event</a></li>
             </ul>
         </div>
     </div>
@@ -19,15 +19,15 @@
         <img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/>
         <div class="row">
             <div class="col-md-12">
-                <h2 ng-class="myclass" ng-bind-template="{{event.name}} {{event.date}}"></h2>
+                <h2 ng-class="myclass" ng-bind-template="{{event.name | uppercase}} "></h2>
             </div>
         </div>
-        <div class="btn btn-danger" ng-disabled="buttonDisabled">Disabled</div>
+        <!--<div class="btn btn-danger" ng-disabled="buttonDisabled">Disabled</div>
         <div ng-non-bindable>{{3 + 1}}</div>
         <div ng-bind-html-unsafe="snippet">some title</div>
         <div ng-bind-html="snippet">some title</div>
         <div ng-show="boolValue">Show This</div>
-        <div ng-hide="boolValue">Hide This</div>
+        <div ng-hide="boolValue">Hide This</div>-->
         <div class="row">
             <div class="col-md-3">
                 <div>Date: {{event.date}}</div>
@@ -40,11 +40,25 @@
             </div>
         </div>
         
+        
+
         <hr />
         <ul>Sessions</ul>
+        Order by:
+        <select ng-model="sortorder" class="input-sm">
+            <option selected value="name">Name</option>
+            <option selected value="-upvoteCount">Votes</option>
+        </select>
+        Show:
+        <select ng-model="query.level" class="input-sm">
+            <option selected value="">All</option>
+            <option selected value="introductory">Introductory</option>
+            <option selected value="intermediate">Intermediate</option>
+            <option selected value="advanced">Advanced</option>
+        </select>
         <ul class="list-unstyled">
             
-            <li ng-repeat="session in event.sessions">
+            <li ng-repeat="session in event.sessions | orderBy:sortorder | filter:query">
                 
                 <div class="row session">
                     <div class="well votingWidget col-md-1">
@@ -61,7 +75,7 @@
                     <div class="well col-md-4">
                         <h4 class="well-title">{{session.name}}</h4>
                         <h6>{{session.creatorName}}</h6>
-                        <div>Duration {{session.duration}}</div>
+                        <div>Duration: {{session.duration | durations}}</div>
                         <div>Level: {{session.level}}</div>
                         <p>{{session.abstract}}</p>
                     </div>
@@ -78,5 +92,6 @@
 <script src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/controllers/EventController.js"></script>
+<script src="js/filters.js"></script>
 </body>
 </html>
